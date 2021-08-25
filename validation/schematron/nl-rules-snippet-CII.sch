@@ -9,11 +9,8 @@
 -->
 <pattern xmlns="http://purl.oclc.org/dsdl/schematron" abstract="false" id="nlcius">
   <!-- These rules only apply when the supplier is in the Netherlands -->
-  <rule context="/rsm:CrossIndustryInvoice/rsm:ExchangedDocument[normalize-space(ram:TypeCode) = '384'][$supplierCountry = 'NL']">
-    <!-- Original rule in NLCIUS: BR-NL-9
-         This rule has changed: since 384 is not an allowed invoice type code in PEPPOL BIS,
-         this rule now only applies to credit notes
-    -->
+  <rule context="/rsm:CrossIndustryInvoice/rsm:ExchangedDocument[some $code in tokenize('81 83 381 396 532', '\s') satisfies normalize-space(ram:TypeCode) = $code][$supplierCountry = 'NL']">
+    <!-- Original rule in NLCIUS: BR-NL-9 -->
     <assert id="NL-R-001" test="//ram:ApplicableHeaderTradeSettlement/ram:InvoiceReferencedDocument/ram:IssuerAssignedID" flag="fatal">[NL-R-001] For suppliers in the Netherlands, if the document is a creditnote, the document MUST contain an invoice reference (ram:ApplicableHeaderTradeSettlement/ram:InvoiceReferencedDocument/ram:IssuerAssignedID)</assert>
   </rule>
 

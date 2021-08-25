@@ -11,8 +11,8 @@
   <!-- These rules only apply when the supplier is in the Netherlands -->
   <rule context="cbc:CreditNoteTypeCode[$supplierCountry = 'NL']">
     <!-- Original rule in NLCIUS: BR-NL-9
-         This rule has changed: since 384 is not an allowed invoice type code in PEPPOL BIS,
-         this rule now only applies to credit notes
+         Since 384 is not an allowed invoice type code in PEPPOL BIS,
+         this rule only applies to CreditNote documents
     -->
     <assert id="NL-R-001" test="/*/cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID" flag="fatal">[NL-R-001] For suppliers in the Netherlands, if the document is a creditnote, the document MUST contain an invoice reference (cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID)</assert>
   </rule>
