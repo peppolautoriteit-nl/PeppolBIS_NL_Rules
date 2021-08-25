@@ -66,6 +66,6 @@
   </rule>
   <rule context="cac:OrderLineReference/cbc:LineID[$supplierCountry = 'NL']">
     <!-- Original rule in NLCIUS: BR-NL-13 -->
-    <assert id="NL-R-009" test="exists(/*/cac:OrderReference/cbc:ID)" flag="fatal">[NL-R-009] For suppliers in the Netherlands, if an order line reference (BT-132) is used, there must be an order reference on the document level (BT-13)</assert>
+    <assert id="NL-R-009" test="exists(/*/cac:OrderReference/cbc:ID)" flag="fatal">[NL-R-009] For suppliers in the Netherlands, if an order line reference (cac:OrderLineReference/cbc:LineID) is used, there must be an order reference on the document level (cac:OrderReference/cbc:ID)</assert>
   </rule>
 </pattern>

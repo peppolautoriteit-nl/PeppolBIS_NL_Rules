@@ -2011,7 +2011,7 @@
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
                </xsl:attribute>
-               <svrl:text>[NL-R-009] For suppliers in the Netherlands, if an order line reference (BT-132) is used, there must be an order reference on the document level (BT-13)</svrl:text>
+               <svrl:text>[NL-R-009] For suppliers in the Netherlands, if an order line reference (ram:BuyerOrderReferencedCIReferencedDocument/ram:LineID) is used, there must be an order reference on the document level (rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerOrderReferencedDocument/ram:IssuerAssignedID)</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
