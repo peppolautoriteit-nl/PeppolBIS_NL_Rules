@@ -1794,11 +1794,11 @@
 
 
 	  <!--RULE -->
-   <xsl:template match="/rsm:CrossIndustryInvoice/rsm:ExchangedDocument[normalize-space(ram:TypeCode) = '384'][$supplierCountry = 'NL']"
+   <xsl:template match="/rsm:CrossIndustryInvoice/rsm:ExchangedDocument[some $code in tokenize('81 83 381 396 532', '\s') satisfies normalize-space(ram:TypeCode) = $code][$supplierCountry = 'NL']"
                  priority="1008"
                  mode="M20">
       <svrl:fired-rule xmlns:svrl="http://purl.oclc.org/dsdl/svrl"
-                       context="/rsm:CrossIndustryInvoice/rsm:ExchangedDocument[normalize-space(ram:TypeCode) = '384'][$supplierCountry = 'NL']"/>
+                       context="/rsm:CrossIndustryInvoice/rsm:ExchangedDocument[some $code in tokenize('81 83 381 396 532', '\s') satisfies normalize-space(ram:TypeCode) = $code][$supplierCountry = 'NL']"/>
 
 		    <!--ASSERT -->
       <xsl:choose>
@@ -1811,7 +1811,7 @@
                <xsl:attribute name="location">
                   <xsl:apply-templates select="." mode="schematron-select-full-path"/>
                </xsl:attribute>
-               <svrl:text>[NL-R-001] For suppliers in the Netherlands, if the document is a creditnote, the document MUST contain an invoice reference (cac:BillingReference/cac:InvoiceDocumentReference/cbc:ID)</svrl:text>
+               <svrl:text>[NL-R-001] For suppliers in the Netherlands, if the document is a creditnote, the document MUST contain an invoice reference (ram:ApplicableHeaderTradeSettlement/ram:InvoiceReferencedDocument/ram:IssuerAssignedID)</svrl:text>
             </svrl:failed-assert>
          </xsl:otherwise>
       </xsl:choose>
