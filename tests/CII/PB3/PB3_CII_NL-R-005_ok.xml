@@ -87,9 +87,9 @@
 					<ram:ID schemeID="0106">1234567890</ram:ID>
 				</ram:SpecifiedLegalOrganization>
 				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>1234AA</ram:PostcodeCode>
 					<ram:LineOne>SellerStreet</ram:LineOne>
 					<ram:CityName>Salestown</ram:CityName>
-					<ram:PostcodeCode>1234AA</ram:PostcodeCode>
 					<ram:CountryID>NL</ram:CountryID>
 				</ram:PostalTradeAddress> 
 				<ram:URIUniversalCommunication>
@@ -106,9 +106,9 @@
 					<ram:ID schemeID="0190">1234567890</ram:ID>
 				</ram:SpecifiedLegalOrganization>
 				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>4321BB</ram:PostcodeCode>
 					<ram:LineOne>BuyerStreet</ram:LineOne>
 					<ram:CityName>Buytown</ram:CityName>
-					<ram:PostcodeCode>4321BB</ram:PostcodeCode>
 					<ram:CountryID>NL</ram:CountryID>
 				</ram:PostalTradeAddress>
 				<ram:URIUniversalCommunication>
@@ -116,6 +116,12 @@
 				</ram:URIUniversalCommunication> 
 			</ram:BuyerTradeParty>
 		</ram:ApplicableHeaderTradeAgreement>
+
+		<ram:ApplicableHeaderTradeDelivery>
+			<ram:ShipToTradeParty>
+				<ram:Name>Trade Party</ram:Name>
+			</ram:ShipToTradeParty>
+		</ram:ApplicableHeaderTradeDelivery>
 
 		<ram:ApplicableHeaderTradeSettlement>
 			<ram:PaymentReference>08/00355</ram:PaymentReference> 

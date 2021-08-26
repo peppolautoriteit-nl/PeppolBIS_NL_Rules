@@ -87,9 +87,9 @@
 					<ram:ID schemeID="0106">1234567890</ram:ID>
 				</ram:SpecifiedLegalOrganization>
 				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>1234AA</ram:PostcodeCode>
 					<ram:LineOne>SellerStreet</ram:LineOne>
 					<ram:CityName>Salestown</ram:CityName>
-					<ram:PostcodeCode>1234AA</ram:PostcodeCode>
 					<ram:CountryID>NL</ram:CountryID>
 				</ram:PostalTradeAddress> 
 				<ram:URIUniversalCommunication>
@@ -103,9 +103,9 @@
 			<ram:BuyerTradeParty>
 				<ram:Name>Buyers B.V.</ram:Name>
 				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>4321BB</ram:PostcodeCode>
 					<ram:LineOne>BuyerStreet</ram:LineOne>
 					<ram:CityName>Buytown</ram:CityName>
-					<ram:PostcodeCode>4321BB</ram:PostcodeCode>
 					<ram:CountryID>NL</ram:CountryID>
 				</ram:PostalTradeAddress>
 				<ram:URIUniversalCommunication>
@@ -113,6 +113,12 @@
 				</ram:URIUniversalCommunication> 
 			</ram:BuyerTradeParty>
 		</ram:ApplicableHeaderTradeAgreement>
+
+		<ram:ApplicableHeaderTradeDelivery>
+			<ram:ShipToTradeParty>
+				<ram:Name>Trade Party</ram:Name>
+			</ram:ShipToTradeParty>
+		</ram:ApplicableHeaderTradeDelivery>
 
 		<ram:ApplicableHeaderTradeSettlement>
 			<ram:PaymentReference>08/00355</ram:PaymentReference> 
@@ -181,13 +187,14 @@
 				<ram:GrandTotalAmount>363</ram:GrandTotalAmount>
 				<ram:DuePayableAmount>363</ram:DuePayableAmount>
 			</ram:SpecifiedTradeSettlementHeaderMonetarySummation>
-      
+
 			<ram:InvoiceReferencedDocument>
 				<ram:IssuerAssignedID>12345</ram:IssuerAssignedID>
 			</ram:InvoiceReferencedDocument>
+
 		</ram:ApplicableHeaderTradeSettlement>
 
-	</rsm:SupplyChainTradeTransaction>
+    </rsm:SupplyChainTradeTransaction>
 
 </rsm:CrossIndustryInvoice> 
 

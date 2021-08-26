@@ -87,9 +87,9 @@
 					<ram:ID schemeID="0106">1234567890</ram:ID>
 				</ram:SpecifiedLegalOrganization>
 				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>1234AA</ram:PostcodeCode>
 					<ram:LineOne>SellerStreet</ram:LineOne>
 					<ram:CityName>Salestown</ram:CityName>
-					<ram:PostcodeCode>1234AA</ram:PostcodeCode>
 					<ram:CountryID>NL</ram:CountryID>
 				</ram:PostalTradeAddress> 
 				<ram:URIUniversalCommunication>
@@ -100,31 +100,37 @@
 				</ram:SpecifiedTaxRegistration>
 			</ram:SellerTradeParty>
 
-			<ram:SellerTaxRepresentativeTradeParty>
-				<ram:Name>Tax Inc.</ram:Name>
-				<ram:PostalTradeAddress>
-					<ram:CityName>Vattown</ram:CityName>
-					<ram:PostcodeCode>2211CC</ram:PostcodeCode>
-					<ram:CountryID>NL</ram:CountryID>
-				</ram:PostalTradeAddress>
-				<ram:SpecifiedTaxRegistration>
-					<ram:ID schemeID="VA">NL22222222B01</ram:ID>
-				</ram:SpecifiedTaxRegistration>
-			</ram:SellerTaxRepresentativeTradeParty>
-
 			<ram:BuyerTradeParty>
 				<ram:Name>Buyers B.V.</ram:Name>
 				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>4321BB</ram:PostcodeCode>
 					<ram:LineOne>BuyerStreet</ram:LineOne>
 					<ram:CityName>Buytown</ram:CityName>
-					<ram:PostcodeCode>4321BB</ram:PostcodeCode>
 					<ram:CountryID>NL</ram:CountryID>
 				</ram:PostalTradeAddress>
 				<ram:URIUniversalCommunication>
 					<ram:URIID schemeID="0106">87654321</ram:URIID> 
 				</ram:URIUniversalCommunication> 
 			</ram:BuyerTradeParty>
+
+			<ram:SellerTaxRepresentativeTradeParty>
+				<ram:Name>Tax Inc.</ram:Name>
+				<ram:PostalTradeAddress>
+					<ram:PostcodeCode>2211CC</ram:PostcodeCode>
+					<ram:CityName>Vattown</ram:CityName>
+					<ram:CountryID>NL</ram:CountryID>
+				</ram:PostalTradeAddress>
+				<ram:SpecifiedTaxRegistration>
+					<ram:ID schemeID="VA">NL22222222B01</ram:ID>
+				</ram:SpecifiedTaxRegistration>
+			</ram:SellerTaxRepresentativeTradeParty>
 		</ram:ApplicableHeaderTradeAgreement>
+
+		<ram:ApplicableHeaderTradeDelivery>
+			<ram:ShipToTradeParty>
+				<ram:Name>Trade Party</ram:Name>
+			</ram:ShipToTradeParty>
+		</ram:ApplicableHeaderTradeDelivery>
 
 		<ram:ApplicableHeaderTradeSettlement>
 			<ram:PaymentReference>08/00355</ram:PaymentReference> 
