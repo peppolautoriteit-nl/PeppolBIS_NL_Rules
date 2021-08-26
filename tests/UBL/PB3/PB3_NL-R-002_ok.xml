@@ -4,7 +4,7 @@
   <cbc:ProfileID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</cbc:ProfileID>
   <cbc:ID>10000005</cbc:ID>
   <cbc:IssueDate>2021-02-23</cbc:IssueDate>
-  <cbc:InvoiceTypeCode>384</cbc:InvoiceTypeCode>
+  <cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
   <cbc:Note>KIA STONIC PE 1.0 TGDI 100pk MHEV DynamicPlusLine</cbc:Note>
   <cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
   <cac:InvoicePeriod>
@@ -27,11 +27,11 @@
         <cbc:Name>Leaseme NL B.V.</cbc:Name>
       </cac:PartyName>
       <cac:PostalAddress>
-        <cbc:StreetName>Street 2</cbc:StreetName>
+        <cbc:StreetName>Street 1</cbc:StreetName>
         <cbc:CityName>City</cbc:CityName>
         <cbc:PostalZone>1234 AB</cbc:PostalZone>
         <cac:Country>
-          <cbc:IdentificationCode>NL</cbc:IdentificationCode>
+          <cbc:IdentificationCode>BE</cbc:IdentificationCode>
         </cac:Country>
       </cac:PostalAddress>
       <cac:PartyTaxScheme>

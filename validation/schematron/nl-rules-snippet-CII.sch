@@ -61,9 +61,9 @@
               normalize-space(ram:TypeCode) = '59'" flag="fatal">[NL-R-008] For suppliers in the Netherlands, the payment means code (ram:SpecifiedTradeSettlementPaymentMeans/ram:TypeCode) MUST be one of 30, 48, 49, 57, 58 or 59</assert>
   </rule>
 
-  <rule context="rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:BuyerOrderReferencedCIReferencedDocument/ram:LineID[$supplierCountry = 'NL']">
+  <rule context="rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:IncludedSupplyChainTradeLineItem/ram:SpecifiedLineTradeAgreement/ram:BuyerOrderReferencedDocument/ram:LineID[$supplierCountry = 'NL']">
     <!-- Original rule in NLCIUS: BR-NL-13 -->
-    <assert id="NL-R-009" test="exists(/rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerOrderReferencedDocument/ram:IssuerAssignedID)" flag="fatal">[NL-R-009] For suppliers in the Netherlands, if an order line reference (ram:BuyerOrderReferencedCIReferencedDocument/ram:LineID) is used, there must be an order reference on the document level (rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerOrderReferencedDocument/ram:IssuerAssignedID)</assert>
+    <assert id="NL-R-009" test="exists(/rsm:CrossIndustryInvoice/rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerOrderReferencedDocument/ram:IssuerAssignedID)" flag="fatal">[NL-R-009] For suppliers in the Netherlands, if an order line reference (ram:BuyerOrderReferencedDocument/ram:LineID) is used, there must be an order reference on the document level (rsm:SupplyChainTradeTransaction/ram:ApplicableHeaderTradeAgreement/ram:BuyerOrderReferencedDocument/ram:IssuerAssignedID)</assert>
   </rule>
 
 </pattern>
