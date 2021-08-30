@@ -1,6 +1,6 @@
 # Country-specific rules for the Netherlands in Peppol BIS 3 Invoice and CreditNote
 
-*Version 0.5, 2021-03-26*
+*Version 1.0, 2021-08-30*
 
 ## 1 Introduction
 
@@ -148,26 +148,3 @@ All other rules (BR-NL-19 to BR-NL-35) are recommendations, and are dropped for 
 | *Context* | doc:Invoice/cac:InvoiceLine/cac:OrderLineReference/cbc:LineID |
 | *Test* | exists(/*/cac:OrderReference/cbc:ID) |
 | *Remarks* | There is no check on supplier country in the context or test yet |
-
-
-## 6 Validation of the additional rules
-
-Until the additional country-specific rules are added to Peppol BIS 3, documents can be validated on https://peppol-test.nl/validate by using one of two temporary CustomizationIDs:
-
-`urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0#draft_nl_error`
-
-By using this CustomizationID the NL rules will generate an error. This would simulate the situation where the NL rules are in production.
-
-`urn:cen.eu:en16931:2017#compliant#urn:fdc:peppol.eu:2017:poacc:billing:3.0#draft_nl_warning`
-
-By using this CustomizationID the NL rules will generate only a warning. This could be useful for service providers that want to embed automated checks in their production systems to see how many of their current production Peppol BIS 3 Invoices/CreditNotes are compliant with these rules without stopping the workflows.
-
-On [https://peppol-test.nl/validate](https://peppol-test.nl/validate) these document types can be found in the dropdown list as:
-
-* “Draft country-specific NL PEPPOL BIS 3 (errors)”
-
-* “Draft country-specific NL PEPPOL BIS 3 (warnings)”
-
-## 7 Schematron validation for UBL
-
-The schematron validation snippet for these rules can be found here: https://github.com/peppolautoriteit-nl/PeppolBIS_NL_Rules_Draft
