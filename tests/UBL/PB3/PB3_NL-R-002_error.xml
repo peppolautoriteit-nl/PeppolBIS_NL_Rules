@@ -28,7 +28,7 @@
       </cac:PartyName>
       <cac:PostalAddress>
         <cac:Country>
-          <cbc:IdentificationCode>BE</cbc:IdentificationCode>
+          <cbc:IdentificationCode>NL</cbc:IdentificationCode>
         </cac:Country>
       </cac:PostalAddress>
       <cac:PartyTaxScheme>
