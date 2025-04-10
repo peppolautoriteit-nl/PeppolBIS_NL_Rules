@@ -128,7 +128,7 @@ All other rules (BR-NL-19 to BR-NL-35) are recommendations, and are dropped for 
 | *Business rule (english)* | For suppliers in the Netherlands, the supplier MUST provide a means of payment (cac:PaymentMeans) if the payment is from customer to supplier |
 | *Business rule (dutch)* | Het is verplicht voor Nederlandse leveranciers (BT-40 = NL) om de Betaalinstructies (BG-16) te vullen indien de betaling van afnemer naar leverancier gaat. |
 | *Context* | doc:Invoice/cac:LegalMonetaryTotal |
-| *Test* | xs:decimal(cbc:PayableAmount) <= 0.0 or (//cac:PaymentMeans) |
+| *Test* | (/ubl-invoice:Invoice and xs:decimal(cbc:PayableAmount) <= 0.0) or (/ubl-creditnote:CreditNote and xs:decimal(cbc:PayableAmount) >= 0.0) or (//cac:PaymentMeans) |
 | *Remarks* | There is no check on supplier country in the context or test yet |
 
 
